@@ -70,6 +70,186 @@ function MovieImage(props) {
                     lastName={props.item[5].tituloSecundario}
                 />
             </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
+            <div className={styles.movieInformations}>
+                <div className={styles.movieImages}>
+                    <img src={fenix} alt="ordem da fenix"/>
+                </div>
+                <MovieInformations
+                    name={props.item[5].tituloPrincipal}
+                    lastName={props.item[5].tituloSecundario}
+                />
+            </div>
+
         </>
         
     );
