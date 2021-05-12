@@ -1,5 +1,5 @@
 import styles from './Header.module.css';
-import icon from './images/icon.png';
+import icon from './images/icon-header.png';
 
 function Header() {
     return (

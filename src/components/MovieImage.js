@@ -19,7 +19,7 @@ function MovieImage(props) {
     <>
       <div className={styles.movieInformations}>
         <div className={styles.movieImages}>
-          <div className="overlay"></div>
+          <div className={styles.overlay}></div>
           <img src={pedraFilosofal} alt="a pedra filosofal" />
         </div>
         <MovieInformations
@@ -30,6 +30,7 @@ function MovieImage(props) {
 
       <div className={styles.movieInformations}>
         <div className={styles.movieImages}>
+          <div className={styles.overlay}></div>
           <img src={camaraSecreta} alt="a camara secreta" />
         </div>
         <MovieInformations
@@ -40,6 +41,7 @@ function MovieImage(props) {
 
       <div className={styles.movieInformations}>
         <div className={styles.movieImages}>
+          <div className={styles.overlay}></div>
           <img src={prisioneiro} alt="prisioneiro de azkabam" />
         </div>
         <MovieInformations
@@ -50,6 +52,7 @@ function MovieImage(props) {
 
       <div className={styles.movieInformations}>
         <div className={styles.movieImages}>
+          <div className={styles.overlay}></div>
           <img src={calice} alt="calife de fogo" />
         </div>
         <MovieInformations
@@ -60,6 +63,7 @@ function MovieImage(props) {
 
       <div className={styles.movieInformations}>
         <div className={styles.movieImages}>
+          <div className={styles.overlay}></div>
           <img src={enigma} alt="enigma do principe" />
         </div>
         <MovieInformations
@@ -70,6 +74,7 @@ function MovieImage(props) {
 
       <div className={styles.movieInformations}>
         <div className={styles.movieImages}>
+          <div className={styles.overlay}></div>
           <img src={fenix} alt="ordem da fenix" />
         </div>
         <MovieInformations
@@ -80,6 +85,7 @@ function MovieImage(props) {
 
       <div className={styles.movieInformations}>
         <div className={styles.movieImages}>
+          <div className={styles.overlay}></div>
           <img src={sociedadeDoAnel} alt="a sociedade do anel" />
         </div>
         <MovieInformations
@@ -90,6 +96,7 @@ function MovieImage(props) {
 
       <div className={styles.movieInformations}>
         <div className={styles.movieImages}>
+          <div className={styles.overlay}></div>
           <img src={asDuasTorres} alt="as duas torres" />
         </div>
         <MovieInformations
@@ -100,6 +107,7 @@ function MovieImage(props) {
 
       <div className={styles.movieInformations}>
         <div className={styles.movieImages}>
+          <div className={styles.overlay}></div>
           <img src={retornoDoRei} alt="retorno do rei" />
         </div>
         <MovieInformations
@@ -110,6 +118,7 @@ function MovieImage(props) {
 
       <div className={styles.movieInformations}>
         <div className={styles.movieImages}>
+          <div className={styles.overlay}></div>
           <img src={eminem} alt="8 mile" />
         </div>
         <MovieInformations
@@ -120,6 +129,7 @@ function MovieImage(props) {
 
       <div className={styles.movieInformations}>
         <div className={styles.movieImages}>
+          <div className={styles.overlay}></div>
           <img src={fightClub} alt="fight club" />
         </div>
         <MovieInformations
@@ -130,6 +140,7 @@ function MovieImage(props) {
 
       <div className={styles.movieInformations}>
         <div className={styles.movieImages}>
+          <div className={styles.overlay}></div>
           <img src={limitless} alt="limitless" />
         </div>
         <MovieInformations
