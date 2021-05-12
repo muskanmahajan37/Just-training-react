@@ -1,0 +1,16 @@
+.movieInformations{
+    padding: 5px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movieImages{
+    border: 1px solid white;
+    flex: 1;
+}
+
+.movieImages img{
+    width: 100%;
+    height: 100%;
+}

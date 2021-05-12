@@ -1,0 +1,42 @@
+.movieInformation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+.movieInformation.added{
+    background: green
+}
+
+.movieInformation p:first-child{
+    padding-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.movieInformation p:first-child:hover{
+    text-decoration: underline;
+}
+
+.movieInformation p:last-child{
+    padding: 0;
+}
+
+.movieInformation button {
+    padding: 5px 10px;
+    background-color: rgb(117, 115, 115);
+    color: blanchedalmond;;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 14px;
+    margin-top: 10px;
+    border: 1px solid rgb(158, 153, 153);
+}
+
+.movieInformation button:hover{
+    background-color: rgb(83, 85, 83);
+}
