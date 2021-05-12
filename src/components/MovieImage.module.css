@@ -10,7 +10,11 @@
     flex: 1;
     margin-top: 20px;
     cursor: pointer;
+    position: relative;
 }
+
+
+
 
 .movieImages img{
     width: 100%;
