@@ -28,6 +28,30 @@ function MovieWrapper() {
             tituloPrincipal: 'Harry potter',
             tituloSecundario: 'E a ordem da fenix'
         },
+        {
+            tituloPrincipal: 'O senhor dos anéis',
+            tituloSecundario: 'A sociedade do anel'
+        },
+        {
+            tituloPrincipal: 'O senhor dos anéis',
+            tituloSecundario: 'As Duas torres'
+        },
+        {
+            tituloPrincipal: 'O senhor dos anéis',
+            tituloSecundario: 'O retorno do rei'
+        },
+        {
+            tituloPrincipal: 'Eminem',
+            tituloSecundario: '8 mile'
+        },
+        {
+            tituloPrincipal: 'Fight Club',
+            tituloSecundario: '.'
+        },
+        {
+            tituloPrincipal: 'Limitless',
+            tituloSecundario: '.'
+        },
     ]
 
     return (
