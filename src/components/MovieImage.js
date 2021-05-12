@@ -1,18 +1,18 @@
 import styles from './MovieImage.module.css';
 import MovieInformations from './MovieInformations';
 
-import pedraFilosofal from './images/pedra.jpg';
-import camaraSecreta from './images/camara.jpg';
+import pedraFilosofal from './images/pedra.png';
+import camaraSecreta from './images/camara.png';
 import prisioneiro from './images/prisioneiro.jpg';
-import calice from './images/calice.jpg';
-import enigma from './images/enigma.jpg';
-import fenix from './images/fenix.jpg';
-import sociedadeDoAnel from './images/sociedade-do-anel.jpg';
-import asDuasTorres from './images/as-duas-torres.jpg';
-import retornoDoRei from './images/retorno-do-rei.jpg';
-import eminem from './images/eminem.jpg';
-import fightClub from './images/fightClub.jpg';
-import limitless from './images/limitless.jpg';
+import calice from './images/calice.png';
+import enigma from './images/enigma.png';
+import fenix from './images/fenix.png';
+import sociedadeDoAnel from './images/sociedade-do-anel.png';
+import asDuasTorres from './images/as-duas-torres.png';
+import retornoDoRei from './images/retorno-do-rei.png';
+import eminem from './images/eminem.png';
+import fightClub from './images/fightClub.png';
+import limitless from './images/limitless.png';
 
 function MovieImage(props) {
     return (

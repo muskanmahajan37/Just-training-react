@@ -9,6 +9,7 @@
     border: 1px solid white;
     flex: 1;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .movieImages img{
