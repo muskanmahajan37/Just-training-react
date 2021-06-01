@@ -1,10 +1,8 @@
-import './Button.css';
+import './Button.css'
 
-const Button = props => {
+const Button = function (props) {
     return (
-        <button
-            type="submit">{props.children}
-        </button>
+        <button>{props.children}</button>
     )
 }
 
