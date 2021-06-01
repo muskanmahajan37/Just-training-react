@@ -1,12 +1,13 @@
 function FormInput(props) {
     return (
-        <div className={`formControl ${!usernameIsValid ? 'Invalid' : ''}`}>
-                <label for="username">Username</label>
-                <input
-                    type={props.type}
-                    id="username"
-                    onChange={onUsername}
-                />
+        <div className={props.className}>
+            <label for={props.id}>{props.children}</label>
+            <input
+                type={props.type}
+                id={props.id}
+                onChange={props.onChangeHandler}
+            />
+            <small>error message</small>
         </div>
     )
 }
