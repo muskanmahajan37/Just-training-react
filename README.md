@@ -1,1 +1,1 @@
-repositório para aplicação pratica nos estudos React, os commits serão deletados no mesmo dia
+This repository is dedicated to putting into practice the studies in React, the commits will be "deleted" on the same day for reinforcement of new practices.
