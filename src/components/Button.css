@@ -1,10 +1,10 @@
 button{
     width: 100%;
     padding: 10px;
-    margin-top: 20px;
-    font-size: 16px;
-    background: purple;
-    border: 1px solid rgb(83, 1, 83);
-    color: white;
     cursor: pointer;
+    background: rgb(139, 12, 139);
+    border: 1px solid rgb(139, 12, 139);
+    border-radius: 4px;
+    color: whitesmoke;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }

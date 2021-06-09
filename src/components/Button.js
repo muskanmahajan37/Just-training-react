@@ -1,9 +1,7 @@
-import './Button.css'
+import "./Button.css";
 
-const Button = function (props) {
-    return (
-        <button>{props.children}</button>
-    )
+function Button(props) {
+    return <button>{props.children}</button>;
 }
 
 export default Button;
