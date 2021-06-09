@@ -4,11 +4,12 @@ form{
     padding: 20px;
     border-radius: 4px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background: whitesmoke;
 }
 
 form h2{
     margin-bottom: 20px;
-    color: rgb(114, 112, 112);
+    color: rgb(77, 77, 77);
 }
 
 .form-control{

@@ -25,6 +25,27 @@ function Form() {
             >
                 E-mail
             </FormControl>
+
+            <FormControl
+                id="password"
+                type="password"
+                name="password"
+                placeHolder="password"
+                outputMessages="password"
+            >
+                Password
+            </FormControl>
+
+            <FormControl
+                id="passwordCheck"
+                type="password"
+                name="passwordCheck"
+                placeHolder="confirm password"
+                outputMessages="passwordCheck"
+            >
+                Password check
+            </FormControl>
+
             <Button>Submit</Button>
         </form>
     );

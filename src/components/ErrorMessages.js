@@ -1,3 +1,5 @@
+import './ErrorMessages.css';
+
 function ErrorMessages(props) {
     return (
         <small>

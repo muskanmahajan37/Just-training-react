@@ -16,6 +16,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgb(104, 35, 104);
 }
 
 code {
