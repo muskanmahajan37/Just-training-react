@@ -18,3 +18,8 @@
     border: 1px solid #ccc;
     background: rgb(247, 235, 235);
 }
+
+.form-control.invalid input{
+    border: 1px solid red;
+    background: rgb(247, 235, 235);
+}
