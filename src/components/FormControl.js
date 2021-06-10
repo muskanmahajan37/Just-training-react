@@ -20,7 +20,7 @@ function FormControl(props) {
                     }
                 }
             ></input>
-            <ErrorMessages ErrorMessages={props.outputMessages} />
+            <ErrorMessages validation={props.booleano} ErrorMessages={props.outputMessages} />
         </div>
     );
 }

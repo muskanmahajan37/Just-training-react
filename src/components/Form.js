@@ -26,6 +26,7 @@ function Form() {
             setUsernameInfo((usernameValues) => {
                 const currentUsernameInfo = {
                     ...usernameValues,
+                    usernameErrorMessage: 'Short username',
                     isUsernameValid: false
                 }
                 return currentUsernameInfo
