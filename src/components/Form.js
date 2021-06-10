@@ -6,15 +6,13 @@ import Button from "./Button";
 function Form() {
     const [usernameInfo, setUsernameInfo] = useState({
         usernameInput: '',
-        usernameErrorMessage: 'ss',
+        usernameErrorMessage: '',
         isUsernameValid: true
     })
 
 
 
     function updateUsernameInfo(e) {
-        console.log(e.target.value)
-
         e.preventDefault();
         setUsernameInfo((usernameValues) => {
             const currentUsernameInfo = {
@@ -23,6 +21,24 @@ function Form() {
             }
             return currentUsernameInfo;
         })
+
+        if (usernameInfo.usernameInput.trim().length <= 5 ) {
+            setUsernameInfo((usernameValues) => {
+                const currentUsernameInfo = {
+                    ...usernameValues,
+                    isUsernameValid: false
+                }
+                return currentUsernameInfo
+            })
+        } else {
+            setUsernameInfo((usernameValues) => {
+                const currentUsernameInfo = {
+                    ...usernameValues,
+                    isUsernameValid: true
+                }
+                return currentUsernameInfo
+            })
+        }
 
     }
 
@@ -40,9 +56,10 @@ function Form() {
                 id="username"
                 type="text"
                 name="username"
+                booleano={usernameInfo.isUsernameValid}
                 placeHolder="Username"
                 outputMessages={usernameInfo.usernameErrorMessage}
-                onChangeHandler={updateUsernameInfo}
+                onUpdateUsernameInfo={updateUsernameInfo}
             >
                 Username
             </FormControl>

@@ -12,7 +12,9 @@
 }
 
 .form-control input{
+    outline: none;
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #ccc;
+    background: rgb(247, 235, 235);
 }
