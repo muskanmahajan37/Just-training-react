@@ -10,6 +10,7 @@ function FormControl(props) {
                 id={props.id}
                 name={props.name}
                 placeholder={props.placeHolder}
+                onChange={props.onUpdateUsernameInfo}
             ></input>
             <ErrorMessages ErrorMessages={props.outputMessages}/>
         </div>

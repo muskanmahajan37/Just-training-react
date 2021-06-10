@@ -1,8 +1,38 @@
 import "./Form.css";
 import FormControl from "./FormControl";
+import {useState} from 'react';
 import Button from "./Button";
 
 function Form() {
+    const [usernameInfo, setUsernameInfo] = useState({
+        usernameInput: '',
+        usernameErrorMessage: 'ss',
+        isUsernameValid: true
+    })
+
+
+
+    function updateUsernameInfo(e) {
+        console.log(e.target.value)
+
+        e.preventDefault();
+        setUsernameInfo((usernameValues) => {
+            const currentUsernameInfo = {
+                ...usernameValues,
+                usernameInput: e.target.value,
+            }
+            return currentUsernameInfo;
+        })
+
+    }
+
+
+    function submitHandler(e) {
+        e.preventDefault();
+        
+    }
+
+
     return (
         <form>
             <h2>Create account</h2>
@@ -11,7 +41,8 @@ function Form() {
                 type="text"
                 name="username"
                 placeHolder="Username"
-                outputMessages="cu"
+                outputMessages={usernameInfo.usernameErrorMessage}
+                onChangeHandler={updateUsernameInfo}
             >
                 Username
             </FormControl>
@@ -46,7 +77,7 @@ function Form() {
                 Password check
             </FormControl>
 
-            <Button>Submit</Button>
+            <Button onSubmitHandler={submitHandler}>Submit</Button>
         </form>
     );
 }
