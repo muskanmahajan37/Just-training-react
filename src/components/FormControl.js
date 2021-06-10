@@ -33,7 +33,7 @@ function FormControl(props) {
                 id={props.id}
                 name={props.name}
                 placeholder={props.placeHolder}
-                onChange={props.onUpdateUsernameInfo}
+                onChange={props.onChange}
             ></input>
             <ErrorMessages validation={props.booleano} ErrorMessages={props.outputMessages} />
         </FormControlWrapper>

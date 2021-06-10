@@ -10,10 +10,13 @@ function Form() {
         isUsernameValid: true
     })
 
-
+    function hasWhiteSpace(s) {
+        return s.indexOf(' ') >= 0;
+      }
 
     function updateUsernameInfo(e) {
         e.preventDefault();
+
         setUsernameInfo((usernameValues) => {
             const currentUsernameInfo = {
                 ...usernameValues,
@@ -31,7 +34,17 @@ function Form() {
                 }
                 return currentUsernameInfo
             })
-        } else {
+
+        } else if (hasWhiteSpace(usernameInfo.usernameInput) === true) {
+            setUsernameInfo((usernameValues) => {
+                const currentUsernameValues = {
+                    ...usernameValues,
+                    usernameErrorMessage: 'Remove white space',
+                    isUsernameValid: false
+                }
+                return currentUsernameValues;
+            })
+        }  else {
             setUsernameInfo((usernameValues) => {
                 const currentUsernameInfo = {
                     ...usernameValues,
@@ -40,7 +53,6 @@ function Form() {
                 return currentUsernameInfo
             })
         }
-
     }
 
 
@@ -60,7 +72,7 @@ function Form() {
                 booleano={usernameInfo.isUsernameValid}
                 placeHolder="Username"
                 outputMessages={usernameInfo.usernameErrorMessage}
-                onUpdateUsernameInfo={updateUsernameInfo}
+                onChange={updateUsernameInfo}
             >
                 Username
             </FormControl>
