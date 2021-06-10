@@ -95,7 +95,7 @@ function Form() {
                 Password check
             </FormControl>
 
-            <Button onSubmitHandler={submitHandler}>Submit</Button>
+            <Button onClick={submitHandler}>Submit</Button>
         </form>
     );
 }
