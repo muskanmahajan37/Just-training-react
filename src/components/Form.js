@@ -138,24 +138,6 @@ function Form() {
                 };
                 return currentPasswordInfo;
             });
-        } else if (!hasNumbers(passwordInfo.passwordInput)) {
-            setPasswordInfo((passwordValues) => {
-                const currentPasswordInfo = {
-                    ...passwordValues,
-                    isPasswordValid: false,
-                    passwordErrorMessage: "must contain at least 2 numbers",
-                };
-                return currentPasswordInfo;
-            });
-        } else if (hasWhiteSpace(passwordInfo.passwordInput) === true) {
-            setPasswordInfo((passwordValues) => {
-                const currentPasswordInfo = {
-                    ...passwordValues,
-                    isPasswordValid: false,
-                    passwordErrorMessage: "Remove white space",
-                };
-                return currentPasswordInfo;
-            });
         } else {
             setPasswordInfo((passwordValues) => {
                 const currentPasswordInfo = {
@@ -181,6 +163,26 @@ function Form() {
 
     function submitHandler(e) {
         e.preventDefault();
+
+        if (!hasNumbers(passwordInfo.passwordInput)) {
+            setPasswordInfo((passwordValues) => {
+                const currentPasswordInfo = {
+                    ...passwordValues,
+                    isPasswordValid: false,
+                    passwordErrorMessage: "must contain at least 2 numbers",
+                };
+                return currentPasswordInfo;
+            });
+        } else if (hasWhiteSpace(passwordInfo.passwordInput) === true) {
+            setPasswordInfo((passwordValues) => {
+                const currentPasswordInfo = {
+                    ...passwordValues,
+                    isPasswordValid: false,
+                    passwordErrorMessage: "Remove white space",
+                };
+                return currentPasswordInfo;
+            });
+        } 
 
         if (
             passwordInfo.passwordInput !== passwordCheckInfo.passwordCheckInput
