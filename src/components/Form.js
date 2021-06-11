@@ -18,8 +18,14 @@ function Form() {
 
     const [passwordInfo, setPasswordInfo] = useState({
         passwordInput: "",
-        passwordErrorMessage: "",
+        passwordErrorMessage: "",git
         isPasswordValid: true,
+    });
+
+    const [passwordCheckInfo, setPasswordCheckInfo] = useState({
+        passwordCheckInput: "",
+        passwordCheckErrorMessage: "",
+        isPasswordCheckValid: true,
     });
 
     function hasWhiteSpace(s) {
@@ -137,8 +143,41 @@ function Form() {
         }
     }
 
+    function onPasswordCheck(e) {
+        e.preventDefault();
+
+        setPasswordCheckInfo((passwordCheckvalue) => {
+            const currentPasswordCheck = {
+                ...passwordCheckvalue,
+                passwordCheckInput: e.target.value,
+            };
+            return currentPasswordCheck;
+        });
+    }
+
     function submitHandler(e) {
         e.preventDefault();
+
+        if (
+            passwordInfo.passwordInput !== passwordCheckInfo.passwordCheckInput
+        ) {
+            setPasswordCheckInfo((passwordCheckValue) => {
+                const currentPasswordCheckInfo = {
+                    ...passwordCheckValue,
+                    isPasswordCheckValid: false,
+                    passwordCheckErrorMessage: "Password doesn't match",
+                };
+                return currentPasswordCheckInfo;
+            });
+        } else {
+            setPasswordCheckInfo((passwordCheckValue) => {
+                const currentPasswordCheckInfo = {
+                    ...passwordCheckValue,
+                    isPasswordCheckValid: true,
+                };
+                return currentPasswordCheckInfo;
+            });
+        }
     }
 
     return (
@@ -184,8 +223,10 @@ function Form() {
                 id="passwordCheck"
                 type="password"
                 name="passwordCheck"
+                booleano={passwordCheckInfo.isPasswordCheckValid}
                 placeHolder="confirm password"
-                outputMessages="passwordCheck"
+                onChange={onPasswordCheck}
+                outputMessages={passwordCheckInfo.passwordCheckErrorMessage}
             >
                 Password check
             </FormControl>
