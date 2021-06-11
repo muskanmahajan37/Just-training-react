@@ -11,10 +11,16 @@ function Form() {
     });
 
     const [emailInfo, setEmailInfo] = useState({
-        emailInput: '',
-        emailErrorMessage: '',
-        isEmailValid: true
-    })
+        emailInput: "",
+        emailErrorMessage: "",
+        isEmailValid: true,
+    });
+
+    const [passwordInfo, setPasswordInfo] = useState({
+        passwordInput: "",
+        passwordErrorMessage: "",
+        isPasswordValid: true,
+    });
 
     function hasWhiteSpace(s) {
         return s.indexOf(" ") >= 0;
@@ -61,35 +67,74 @@ function Form() {
     }
 
     function onEmailInfo(e) {
-        e.preventDefault()
+        e.preventDefault();
 
         setEmailInfo((emailValues) => {
             const currentEmailInfo = {
                 ...emailValues,
-                emailInput: e.target.value
-            }
+                emailInput: e.target.value,
+            };
             return currentEmailInfo;
-        })
+        });
 
         if (emailInfo.emailInput.length <= 5) {
             setEmailInfo((emailValues) => {
                 const currentEmailInfo = {
                     ...emailValues,
                     isEmailValid: false,
-                    emailErrorMessage: 'invalid E-mail address'
-                }
+                    emailErrorMessage: "invalid E-mail address",
+                };
                 return currentEmailInfo;
-            })
+            });
         } else {
             setEmailInfo((emailValues) => {
                 const currentEmailInfo = {
                     ...emailValues,
-                    isEmailValid: true
-                }
+                    isEmailValid: true,
+                };
                 return currentEmailInfo;
-            })
+            });
         }
+    }
+    //password
+    function onPassword(e) {
+        e.preventDefault();
 
+        setPasswordInfo((passwordValues) => {
+            const currentPasswordInfo = {
+                ...passwordValues,
+                passwordInput: e.target.value,
+            };
+            return currentPasswordInfo;
+        });
+
+        if (passwordInfo.passwordInput.length <= 5) {
+            setPasswordInfo((passwordValues) => {
+                const currentPasswordInfo = {
+                    ...passwordValues,
+                    isPasswordValid: false,
+                    passwordErrorMessage: "Weak Password",
+                };
+                return currentPasswordInfo;
+            });
+        } else if (hasWhiteSpace(passwordInfo.passwordInput) === true) {
+            setPasswordInfo((passwordValues) => {
+                const currentPasswordInfo = {
+                    ...passwordValues,
+                    isPasswordValid: false,
+                    passwordErrorMessage: "Remove white space",
+                };
+                return currentPasswordInfo;
+            });
+        } else {
+            setPasswordInfo((passwordValues) => {
+                const currentPasswordInfo = {
+                    ...passwordValues,
+                    isPasswordValid: true,
+                };
+                return currentPasswordInfo;
+            });
+        }
     }
 
     function submitHandler(e) {
@@ -126,9 +171,11 @@ function Form() {
             <FormControl
                 id="password"
                 type="password"
+                booleano={passwordInfo.isPasswordValid}
                 name="password"
                 placeHolder="password"
-                outputMessages="password"
+                outputMessages={passwordInfo.passwordErrorMessage}
+                onChange={onPassword}
             >
                 Password
             </FormControl>
