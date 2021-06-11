@@ -18,7 +18,7 @@ function Form() {
 
     const [passwordInfo, setPasswordInfo] = useState({
         passwordInput: "",
-        passwordErrorMessage: "",git
+        passwordErrorMessage: "",
         isPasswordValid: true,
     });
 
@@ -32,6 +32,22 @@ function Form() {
         return s.indexOf(" ") >= 0;
     }
 
+    function hasNumbers(n) {
+        const number = n.split('')
+        const booleano = number.map((item) => {
+            return Number(item);
+        })
+        const isValid = booleano.map((valid) => {
+            if (valid >= 0) {
+                return true
+            } else {
+                return false
+            }
+        })
+        
+        return isValid.includes(true);
+    }
+       
     function onUsernameInfo(e) {
         e.preventDefault();
 
@@ -105,7 +121,6 @@ function Form() {
     //password
     function onPassword(e) {
         e.preventDefault();
-
         setPasswordInfo((passwordValues) => {
             const currentPasswordInfo = {
                 ...passwordValues,
@@ -120,6 +135,15 @@ function Form() {
                     ...passwordValues,
                     isPasswordValid: false,
                     passwordErrorMessage: "Weak Password",
+                };
+                return currentPasswordInfo;
+            });
+        } else if (!hasNumbers(passwordInfo.passwordInput)) {
+            setPasswordInfo((passwordValues) => {
+                const currentPasswordInfo = {
+                    ...passwordValues,
+                    isPasswordValid: false,
+                    passwordErrorMessage: "must contain at least 2 numbers",
                 };
                 return currentPasswordInfo;
             });
