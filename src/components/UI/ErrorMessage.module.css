@@ -1,0 +1,6 @@
+.popup{
+    padding: 10px;
+    position: fixed;
+    background: red;
+    z-index: 200;
+}
