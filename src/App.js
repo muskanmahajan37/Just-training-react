@@ -1,20 +1,12 @@
-import AddUser from './components/Users/AddUser';
-import UserList from './components/Users/UserList';
-import React, {useState} from 'react'
+import React, { useState } from "react";
+import AddUser from "./componentes/User/AddUser";
 
 function App() {
-    const [userInfo, setUserInfo] = useState([])
-
-    function addUser(uName, uAge){
-        setUserInfo((prevInfo) => {
-            return [...prevInfo, {name: uName, age: uAge}]
-        })
-    }
-
-    return <div className="App">
-        <AddUser onAddUser={addUser}/>
-        <UserList users={userInfo}/>
-    </div>;
+    return (
+        <div className="App">
+            <AddUser />
+        </div>
+    );
 }
 
 export default App;

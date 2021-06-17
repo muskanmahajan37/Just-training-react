@@ -1,0 +1,19 @@
+.input{
+    background: white;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-control label{
+    color: rgb(117, 116, 116);
+}
+
+.form-control input{
+    padding: 5px;
+}
