@@ -1,7 +1,14 @@
 .input{
     width: 400px;
     padding: 20px;
-    margin-top: 50px;
+    margin: 0 auto;
+}
+
+.overlay{
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
 }
 
 .form-control{

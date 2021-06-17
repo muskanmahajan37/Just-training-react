@@ -1,6 +1,18 @@
-.popup{
-    padding: 10px;
+.popUp{
     position: fixed;
-    background: red;
-    z-index: 200;
+    z-index: 1;
+    left: 50%;
+    width: 400px;
+    top: 50%;
+}
+
+header{
+    background: purple;
+    text-align: center;
+    color: white;
+}
+
+.messages{
+    padding: 20px;
+    height: 100px;
 }
