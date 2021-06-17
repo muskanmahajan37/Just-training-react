@@ -17,3 +17,13 @@
 .form-control input{
     padding: 5px;
 }
+
+.buttonInside{
+    background: purple;
+    border: 1px solid rgb(92, 0, 92);
+    color: white;
+}
+
+.buttonInside:hover{
+    background: rgb(105, 2, 105);
+}

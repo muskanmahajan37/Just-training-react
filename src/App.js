@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import AddUser from "./componentes/User/AddUser";
 
 function App() {
