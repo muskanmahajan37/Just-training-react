@@ -1,12 +1,9 @@
-import React from "react";
-import AddUser from "./componentes/User/AddUser";
+import Header from './components/Header';
 
 function App() {
     return (
-        <div className="App">
-            <AddUser />
-        </div>
-    );
+        <Header/>
+    )
 }
 
 export default App;

@@ -1,0 +1,70 @@
+header{
+    padding: 8px 15px;
+    background: #242527;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+header .logo input{
+    padding: 10px;
+    width: 240px;
+    background-color: #3a3b3d;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+}
+
+header .logo input::placeholder{
+    color: #8f9094;
+}
+
+header img{
+    width: 40px;
+}
+
+header .menu ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+    width: 100px;
+}
+
+
+.currentUser .user{
+    box-sizing: border-box;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px 5px 5px;
+    border-radius: 40px;
+    gap: 5px;
+}
+
+.currentUser .user:hover{
+    background-color: #3a3b3d;
+}
+
+.currentUser .user img{
+    width: 25px;
+    border-radius: 100%;
+}
+
+header .currentUser{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header .currentUser img{
+    width: 20px;
+}
