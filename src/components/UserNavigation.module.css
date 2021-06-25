@@ -1,0 +1,16 @@
+.user_navigation{
+    padding: 10px;
+    border-radius: 100%;
+    background: #3a3b3d;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.user_navigation:hover{
+    background: #4c4c4e;
+}
+
+.user_navigation img{
+    width: 25px;
+}

@@ -1,30 +1,20 @@
-li img{
-    width: 25px;
-}
-
-li{
-    padding: 10px 40px;
-    border-radius: 10px;
-    cursor: pointer;
+.list{
     position: relative;
 }
 
-
-li div{
+.list div{
     display: none;
-    text-align: center;
     position: absolute;
+    text-align: center;
+    border-radius: 10px;
     top: 100%;
     left: 0;
     right: 0;
     margin-top: 10px;
     padding: 5px;
-    background-color: rgb(153, 152, 152);
-    color: white;
-    border-radius: 10px;
-    width: auto;
+    background-color: lightgray;
 }
 
-li:hover div{
-   display: block;
+.list:hover div{
+    display: block;
 }
