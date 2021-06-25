@@ -47,21 +47,24 @@ const Header = () => {
                 <div className={styles.user_menu}>
                     <ul>
                         <li>
-                            <CgMenuGridR/>
+                            <CgMenuGridR />
+                            <div>Menu</div>
                         </li>
                         <li>
                             <TiMessages/>
+                            <div>Messenger</div>
                         </li>
                         <li>
                             <IoMdNotifications/>
+                            <div>Notifications</div>
                         </li>
                         <li>
                             <BsCaretDownFill/>
+                            <div>Conta</div>
                         </li>
                     </ul>
                 </div>
             </div>
-
         </header>
     );
 };

@@ -1,9 +1,15 @@
-import Header from './components/Header';
+import Header from "./components//Header/Header";
+import Aside from "./components/Aside/Aside";
 
 function App() {
     return (
-        <Header/>
-    )
+        <>
+            <Header />
+            <div className="wrapper">
+                <Aside></Aside>
+            </div>
+        </>
+    );
 }
 
 export default App;
