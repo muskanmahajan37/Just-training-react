@@ -1,9 +1,10 @@
 .aside{
-    position: fixed;
     background: #18191b;
-    width: 420px;
+    margin-top: 64px;
+    width: 350px;
     height: 100%;
     padding: 10px;
     overflow-y: scroll;
     scroll-behavior: unset;
+    position: fixed;
 }
