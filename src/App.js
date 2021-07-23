@@ -1,17 +1,12 @@
-import Header from "./components//Header/Header";
-import Aside from "./components/Aside/Aside";
-import Feed from "./components/Feed/Feed";
-import Contatos from './components/Contatos/Contatos'
+import React, { useState } from 'react';
 
-function App() {
-    return (
-        <>
-            <Header />
-            <Aside />
-            <Feed />
-            <Contatos/>
-        </>
-    );
-}
+const App = () => {
+
+  return (
+    <div>
+      
+    </div>
+  );
+};
 
 export default App;
