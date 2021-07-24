@@ -1,60 +1,29 @@
-import CourseItemInput from "./components/courseItemInput/CourseItemInput";
-import CourseList from "./components/CourseList/CourseList";
-import React, { useState } from "react";
+import { useState } from "react";
+import AddUserAccount from "./components/addUserAccount/AddUserAccount";
+import UserList from "./components/userList/UserList";
 
-const goalList = [
-    { text: "clean the bathroom", id: "n1" },
-    { text: "clean the bathroom", id: "n2" },
-    { text: "clean the bathroom", id: "n3" },
-    { text: "clean the bathroom", id: "n4" },
-    { text: "clean the bathroom", id: "n5" },
-];
 
 const App = () => {
-    const [goalCollection, setGoalCollection] = useState(goalList);
-    let [enteredValues, setEnteredValues] = useState("");
-    const [valid, setValid] = useState(true);
+    const [userAccountCollection, setUserAccountCollection] = useState([]);
 
-    function deleteItem(goalId) {
-        setGoalCollection((prevList) => {
-            const previousList = [...prevList];
-            return previousList.filter((goal) => goalId !== goal.id);
+    const sendInformations = function (uName, uAge) {
+        const newAccount = {
+            text: uName,
+            age: uAge,
+            id: Math.random().toString(),
+        };
+        setUserAccountCollection((previous) => {
+            const newAccountList = [...previous];
+            newAccountList.unshift(newAccount);
+            return newAccountList;
         });
-    }
-
-    function addNewItem() {
-        if (enteredValues <= 0) {
-            setValid(false);
-            return;
-        } else {
-            setValid(true);
-        }
-        setGoalCollection((prevList) => {
-            return [
-                { text: enteredValues, id: Math.random().toString() },
-                ...prevList,
-            ];
-        });
-        setEnteredValues('')
-    }
-
-    function changeInput(value) {
-        setEnteredValues(value);
-        enteredValues.trim().length >= 0 && setValid(true)
-    }
+    };
 
     return (
         <>
+            <AddUserAccount onSendInformations={sendInformations} />
             <div class="wrapper">
-                <CourseItemInput
-                    onChangeInput={changeInput}
-                    onAddNewItem={addNewItem}
-                    isValid={valid}
-                    value={enteredValues}
-                />
-            </div>
-            <div class="wrapper">
-                <CourseList item={goalCollection} onDeleteItem={deleteItem} />
+                <UserList item={userAccountCollection} />
             </div>
         </>
     );

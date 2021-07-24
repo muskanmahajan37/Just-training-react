@@ -1,0 +1,29 @@
+.list_wrapper {
+  list-style: none;
+  padding: 0;
+}
+
+.list_wrapper .list_item {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #2eff5c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list_wrapper .list_item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.list_wrapper .list_item:hover {
+  background: #77ff94;
+}
+
+.list_wrapper .list_item span {
+  font-weight: bolder;
+}
+/*# sourceMappingURL=Userlist.css.map */

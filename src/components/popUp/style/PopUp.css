@@ -1,0 +1,67 @@
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlay .modal {
+  background: whitesmoke;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.overlay .modal header {
+  background: #33ec96;
+  padding: 10px;
+}
+
+.overlay .modal .content {
+  height: 300px;
+}
+
+.overlay .modal footer {
+  background: #33ec96;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlay .modal footer .close-btn {
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: black;
+  color: white;
+}
+/*# sourceMappingURL=PopUp.css.map */

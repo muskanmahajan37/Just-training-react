@@ -1,0 +1,21 @@
+.list_wrapper {
+    list-style: none;
+    padding: 0;
+    .list_item {
+        padding: 10px 20px;
+        cursor: pointer;
+        background: rgb(46, 255, 92);
+        display: flex;
+        justify-content: space-between;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &:hover {
+            background: rgb(119, 255, 148);
+        }
+        span{
+            font-weight: bolder;
+        }
+    }
+}
