@@ -1,0 +1,20 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    margin: 3rem auto;
+    padding: 20px;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

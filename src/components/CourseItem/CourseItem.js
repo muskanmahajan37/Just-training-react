@@ -1,4 +1,4 @@
-import styles from "./CourseItem.module.scss";
+import styles from "./styles/CourseItem.module.css";
 
 const CourseItem = (props) => {
     function deleteItemOnClick() {

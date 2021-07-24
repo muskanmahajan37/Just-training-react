@@ -1,5 +1,5 @@
 import CourseItem from "../CourseItem/CourseItem";
-import styles from "./CourseList.module.scss";
+import styles from "./styles/CourseList.module.css";
 
 const CourseList = (props) => {
     return (

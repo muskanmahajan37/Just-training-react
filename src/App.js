@@ -12,24 +12,46 @@ const goalList = [
 
 const App = () => {
     const [goalCollection, setGoalCollection] = useState(goalList);
+    let [enteredValues, setEnteredValues] = useState("");
+    const [valid, setValid] = useState(true);
 
     function deleteItem(goalId) {
         setGoalCollection((prevList) => {
             const previousList = [...prevList];
-            return previousList.filter(goal => goalId !== goal.id);
+            return previousList.filter((goal) => goalId !== goal.id);
         });
     }
 
-    function addNewItem(enteredGoal) {
+    function addNewItem() {
+        if (enteredValues <= 0) {
+            setValid(false);
+            return;
+        } else {
+            setValid(true);
+        }
         setGoalCollection((prevList) => {
-            return [{text: enteredGoal, id: Math.random().toString()}, ...prevList];
+            return [
+                { text: enteredValues, id: Math.random().toString() },
+                ...prevList,
+            ];
         });
+        setEnteredValues('')
+    }
+
+    function changeInput(value) {
+        setEnteredValues(value);
+        enteredValues.trim().length >= 0 && setValid(true)
     }
 
     return (
         <>
             <div class="wrapper">
-                <CourseItemInput onAddNewItem={addNewItem} />
+                <CourseItemInput
+                    onChangeInput={changeInput}
+                    onAddNewItem={addNewItem}
+                    isValid={valid}
+                    value={enteredValues}
+                />
             </div>
             <div class="wrapper">
                 <CourseList item={goalCollection} onDeleteItem={deleteItem} />

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,CAAC;CACb",
+    "sources": [
+        "CourseList.module.scss"
+    ],
+    "names": [],
+    "file": "CourseList.module.css"
+}
