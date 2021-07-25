@@ -6,6 +6,8 @@
     z-index: 10;
     top: 39px;
     left: -50px;
+    overflow: hidden;
+    border-radius: 10px;
 
     & :first-child {
         display: flex;
@@ -37,7 +39,34 @@
 .buttons {
     display: flex;
     margin-top: 20px;
-    button{
+    button {
         padding: 10px;
+        cursor: pointer;
+        border: none;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(75, 75, 75);
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        &:first-child{
+            background: rgb(2, 119, 197);
+            &:hover{
+                background: rgb(9, 157, 255);
+            }
+        }
+        &:hover{
+            background: rgb(100, 100, 100);
+        }
+        &:not(:last-child) {
+            text-align: center;
+            margin-right: 10px;
+            width: 160px;
+        }
+        &:last-child{
+            font-size: 18px;
+        }
     }
 }

@@ -11,6 +11,8 @@ const userAccounts = [
         ocupacao: "Advogado",
         img: "./user-1.jpg",
         id: "n1",
+        add: "Adicionar",
+        cancelar: "cancelar",
     },
     {
         nome: "La Voipe",
@@ -20,6 +22,8 @@ const userAccounts = [
         profissao: "estudante",
         img: "./user-2.jpg",
         id: "n2",
+        add: "Adicionar",
+        cancelar: "cancelar",
     },
     {
         nome: "Brenda Ker",
@@ -29,6 +33,8 @@ const userAccounts = [
         profissao: "Programador",
         img: "./user-3.jpg",
         id: "n3",
+        add: "Adicionar",
+        cancelar: "cancelar",
     },
     {
         nome: "Jhayane Kelly",
@@ -38,21 +44,31 @@ const userAccounts = [
         profissao: "Medicina Veterinária",
         img: "./user-4.jpg",
         id: "n4",
+        add: "Adicionar",
+        cancelar: "cancelar",
     },
 ];
 
 const UserList = (props) => {
     const [showPopUp, setShowPopUp] = useState();
     const [currentPopUp, setCurrentPopUp] = useState([]);
+
+    // const [conectionRequest, sendConectionRequest] = useState(true);
+
     const displayPopUp = (e) => {
         const newItem = userAccounts.filter((acc) => acc.id === e.target.id);
         setCurrentPopUp(...newItem);
         setShowPopUp(true);
-        console.log(e);
     };
 
     const mouseLeave = function () {
         setShowPopUp(false);
+    };
+
+    const AddFriend = function (e) {
+        e.preventDefault();
+
+        setCurrentPopUp((currentPopUp.add = "cancelar"));
     };
 
     return (
@@ -63,22 +79,27 @@ const UserList = (props) => {
                         {currentPopUp.id === acc.id && showPopUp && (
                             <PopUp
                                 nome={currentPopUp.nome}
+                                img={currentPopUp.img}
                                 id={currentPopUp.id}
+                                adicionarText={currentPopUp.add}
+                                seguidores={currentPopUp.seguidores}
+                                municipio={currentPopUp.municipio}
                                 key={currentPopUp.id}
+                                onAddFriend={AddFriend}
                                 onMouseLeave={mouseLeave}
                             />
                         )}
                         <div className="picture">
-                            <img src="./user-1.jpg"></img>
+                            <img src={acc.img}></img>
                         </div>
                         <div className="user_informations">
-                            <p
+                            <span
                                 className="username"
                                 onMouseEnter={displayPopUp}
                                 id={acc.id}
                             >
                                 {acc.nome}
-                            </p>
+                            </span>
                             <p className="seguidores">
                                 {acc.seguidores} amigos em comum
                             </p>

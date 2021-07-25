@@ -6,6 +6,8 @@
   z-index: 10;
   top: 39px;
   left: -50px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .popUp :first-child {
@@ -46,5 +48,43 @@
 
 .buttons button {
   padding: 10px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #4b4b4b;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.buttons button:first-child {
+  background: #0277c5;
+}
+
+.buttons button:first-child:hover {
+  background: #099dff;
+}
+
+.buttons button:hover {
+  background: #646464;
+}
+
+.buttons button:not(:last-child) {
+  text-align: center;
+  margin-right: 10px;
+  width: 160px;
+}
+
+.buttons button:last-child {
+  font-size: 18px;
 }
 /*# sourceMappingURL=popUp.css.map */
