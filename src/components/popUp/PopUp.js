@@ -1,19 +1,22 @@
-import "./style/PopUp.css";
+import './styles/popUp.css';
 
-const PopUp = (props) => {
+const PopUp = function (props) {
     return (
-        <div class="overlay">
-            <div class="modal">
-                <header>
-                    <h3>{props.header}</h3>
-                </header>
-                <div class="content"></div>
-                <footer>
-                    <p>{props.footer}</p>
-                    <button class="close-btn" onClick={props.onCloseModal}>
-                        Close modal
-                    </button>
-                </footer>
+        <div className="popUp" id={props.id} onMouseLeave={props.onMouseLeave}>
+            <div>
+                <div className="image">
+                    <img src="./user-1.jpg"></img>
+                </div>
+                <div className="info">
+                    <p>{ props.nome }</p>
+                    <p>seguidores</p>
+                    <p>mora em d</p>
+                </div>
+            </div>
+            <div className="buttons">
+                <button>Adicionar</button>
+                <button>Mensagem</button>
+                <button>op</button>
             </div>
         </div>
     );

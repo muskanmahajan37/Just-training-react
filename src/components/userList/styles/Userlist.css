@@ -1,29 +1,50 @@
-.list_wrapper {
+.user_list {
   list-style: none;
-  padding: 0;
+  position: relative;
 }
 
-.list_wrapper .list_item {
-  padding: 10px 20px;
-  cursor: pointer;
-  background: #2eff5c;
+.user_list .user_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  background: #474747;
+  border-radius: 10px;
+  padding: 20px 20px;
+  position: relative;
 }
 
-.list_wrapper .list_item:not(:last-child) {
-  margin-bottom: 10px;
+.user_list .user_item .picture {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+  overflow: hidden;
 }
 
-.list_wrapper .list_item:hover {
-  background: #77ff94;
+.user_list .user_item .picture img {
+  width: 100%;
 }
 
-.list_wrapper .list_item span {
-  font-weight: bolder;
+.user_list .user_item:not(:last-child) {
+  margin-bottom: 15px;
 }
-/*# sourceMappingURL=Userlist.css.map */
+
+.user_list .user_informations {
+  color: #aaa7a7;
+}
+
+.user_list .user_informations :first-child {
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.user_list .user_informations :first-child:hover {
+  text-decoration: underline;
+}
+
+.user_list .user_informations .seguidores {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=UserList.css.map */
