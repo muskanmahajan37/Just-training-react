@@ -1,0 +1,33 @@
+.form .form_control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form .form_control label {
+  color: #5a5a5a;
+  margin-bottom: 3px;
+}
+
+.form .form_control input {
+  padding: 10px;
+}
+
+.form .createAcc {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background: #00f020;
+}
+
+.form .createAcc:hover {
+  background: #3df355;
+}
+/*# sourceMappingURL=AddNewUser.module.css.map */
