@@ -1,16 +1,42 @@
 import React, { useState, useEffect } from "react";
-import Counter from "./components/counter/Counter";
-
+import Login from "./components/login/Login";
+let x = 0;
 const App = () => {
-    const [isValid, setIsValid] = useState(true);
+    const [enteredUsername, setEnteredUsername] = useState("");
+    const [enteredPassword, setEnteredPassword] = useState("");
+    const [isValid, setIsValid] = useState(false);
 
-    setTimeout(() => {
-        setIsValid(false)
-    }, 5000)
+    const nameChange = function (e) {
+        setEnteredUsername(e.target.value);
+    };
+
+    const passwordChange = function (e) {
+        setEnteredPassword(e.target.value);
+    };
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            console.log("inside the timer");
+            setIsValid(
+                enteredUsername.trim().length > 10 &&
+                    enteredPassword.trim().length > 10
+            );
+        }, 500);
+
+        return () => {;
+            clearTimeout(timer);
+        };
+    }, [enteredUsername, enteredPassword]);
 
     return (
         <React.Fragment>
-            {isValid && <Counter />}
+            {!isValid && (
+                <Login
+                    onNameChange={nameChange}
+                    onChangePassword={passwordChange}
+                />
+            )}
+            {isValid && <h1>hello world</h1>}
         </React.Fragment>
     );
 };
