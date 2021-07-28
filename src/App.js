@@ -1,42 +1,23 @@
-import React, { useState, useEffect } from "react";
-import Login from "./components/login/Login";
-let x = 0;
+import React, { useState, useEffect, useRef } from "react";
+
 const App = () => {
-    const [enteredUsername, setEnteredUsername] = useState("");
-    const [enteredPassword, setEnteredPassword] = useState("");
-    const [isValid, setIsValid] = useState(false);
-
-    const nameChange = function (e) {
-        setEnteredUsername(e.target.value);
-    };
-
-    const passwordChange = function (e) {
-        setEnteredPassword(e.target.value);
-    };
+    const [name, setName] = useState("");
+    const prevName = useRef("");
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            console.log("inside the timer");
-            setIsValid(
-                enteredUsername.trim().length > 10 &&
-                    enteredPassword.trim().length > 10
-            );
-        }, 500);
-
-        return () => {;
-            clearTimeout(timer);
-        };
-    }, [enteredUsername, enteredPassword]);
+        prevName.current = name;
+    }, [name]);
 
     return (
         <React.Fragment>
-            {!isValid && (
-                <Login
-                    onNameChange={nameChange}
-                    onChangePassword={passwordChange}
-                />
-            )}
-            {isValid && <h1>hello world</h1>}
+            <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                type="text"
+            />
+            <div>
+                My name is {name + "1"} it used to be {prevName.current + "1"}
+            </div>
         </React.Fragment>
     );
 };
