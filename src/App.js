@@ -1,22 +1,45 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import Header from "./components/header/Header";
+import Login from "./components/login/Login";
 
 const App = () => {
-    const [name, setName] = useState("");
-    const prevName = useRef("");
+    const [formIsValid, setFormIsValid] = useState(false);
+    const [isLoged, setIsLoged] = useState(false);
+    const setFormValidation = function (validation) {
+        setFormIsValid(validation);
+    };
+
+    const submitHandler = function () {
+        localStorage.setItem("name", "victor");
+        setIsLoged(true);
+    };
 
     useEffect(() => {
-        prevName.current = name;
-    }, [name]);
+        const user = localStorage.getItem("name");
+        if (user === "victor") {
+            setIsLoged(true);
+        }
+    }, []);
+
+    const logOut = function () {
+        localStorage.removeItem("name");
+        setIsLoged(false);
+    };
 
     return (
         <React.Fragment>
-            <input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                type="text"
-            />
-            <div>
-                My name is {name + "1"} it used to be {prevName.current + "1"}
+            <Header isLoged={isLoged} onLogOut={logOut} />
+            <div className="login_wrapper">
+                {isLoged === false ? (
+                    <Login
+                        onSetFormValidationEmail={setFormValidation}
+                        onSetFormValidationPassword={setFormValidation}
+                        onSubmitHandler={submitHandler}
+                        isValid={!formIsValid}
+                    />
+                ) : (
+                    <h1>hello world</h1>
+                )}
             </div>
         </React.Fragment>
     );

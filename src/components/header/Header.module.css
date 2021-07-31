@@ -1,0 +1,45 @@
+.header {
+  padding: 20px;
+  background-color: #b906b0;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header ul li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.header ul li button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  background-color: black;
+}
+
+.header ul li button:hover {
+  background: #3a3939;
+}
+/*# sourceMappingURL=Header.module.css.map */

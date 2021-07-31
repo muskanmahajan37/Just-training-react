@@ -14,18 +14,10 @@ body {
   margin: 0;
 }
 
-.wrapper {
-  width: 500px;
-  border-radius: 7px;
-  margin: 3% auto;
-  padding: 20px;
-  border: 1px solid black;
-}
-
-.account_wrapper {
-  padding: 10px;
+.login_wrapper {
+  margin: 1% auto;
+  border: 1px solid #ccc;
+  padding: 50px 40px;
   width: 700px;
-  margin: 0 auto;
-  border: 1px solid black;
 }
 /*# sourceMappingURL=index.css.map */
