@@ -12,12 +12,11 @@ html {
 
 body {
   margin: 0;
+  background-color: #141515;
 }
 
-.login_wrapper {
+.form_wrapper {
+  width: 400px;
   margin: 1% auto;
-  border: 1px solid #ccc;
-  padding: 50px 40px;
-  width: 700px;
 }
 /*# sourceMappingURL=index.css.map */

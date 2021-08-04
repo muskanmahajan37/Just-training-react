@@ -1,46 +1,39 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/header/Header";
-import Login from "./components/login/Login";
+import Wrapper from "./components/UI/wrapper/Wrapper";
+import Form from "./components/form/Form";
 
 const App = () => {
     const [formIsValid, setFormIsValid] = useState(false);
-    const [isLoged, setIsLoged] = useState(false);
-    const setFormValidation = function (validation) {
-        setFormIsValid(validation);
-    };
 
-    const submitHandler = function () {
-        localStorage.setItem("name", "victor");
-        setIsLoged(true);
+    const submit = function () {
+        setFormIsValid(true);
+
+        localStorage.setItem("user", "victor");
     };
 
     useEffect(() => {
-        const user = localStorage.getItem("name");
+        const user = localStorage.getItem("user");
         if (user === "victor") {
-            setIsLoged(true);
+            setFormIsValid(true);
         }
     }, []);
 
-    const logOut = function () {
-        localStorage.removeItem("name");
-        setIsLoged(false);
+    const onLogOut = function () {
+        localStorage.removeItem("user");
+        setFormIsValid(false);
     };
 
     return (
         <React.Fragment>
-            <Header isLoged={isLoged} onLogOut={logOut} />
-            <div className="login_wrapper">
-                {isLoged === false ? (
-                    <Login
-                        onSetFormValidationEmail={setFormValidation}
-                        onSetFormValidationPassword={setFormValidation}
-                        onSubmitHandler={submitHandler}
-                        isValid={!formIsValid}
-                    />
+            <Header displayMenu={formIsValid} onLogOut={onLogOut} />
+            <Wrapper className="form_wrapper">
+                {formIsValid === false ? (
+                    <Form onSubmit={submit} />
                 ) : (
-                    <h1>hello world</h1>
+                    <h1>Welcome</h1>
                 )}
-            </div>
+            </Wrapper>
         </React.Fragment>
     );
 };

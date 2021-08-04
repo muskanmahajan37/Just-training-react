@@ -1,7 +1,6 @@
 .header {
-  padding: 20px;
-  background-color: #b906b0;
-  color: white;
+  padding: 20px 40px;
+  background-color: #1ed760;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,18 +9,25 @@
           justify-content: space-between;
 }
 
+.header h1 {
+  color: black;
+}
+
 .header ul {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .header ul li:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 15px;
 }
 
 .header ul li a {
@@ -30,16 +36,12 @@
 }
 
 .header ul li button {
-  padding: 10px 20px;
-  cursor: pointer;
-  border: none;
-  border-radius: 20px;
-  color: white;
-  font-weight: 600;
   background-color: black;
-}
-
-.header ul li button:hover {
-  background: #3a3939;
+  color: #1ed760;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 30px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=Header.module.css.map */

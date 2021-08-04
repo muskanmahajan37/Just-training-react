@@ -1,25 +1,27 @@
 import styles from "./Header.module.css";
 
 const Header = function (props) {
-    const logOutUser = function (e) {
-        e.preventDefault();
+
+    const logout = function () {
         props.onLogOut();
-    };
+    }
 
     return (
         <header className={styles.header}>
-            <h1>A Typical Page</h1>
-
-            {props.isLoged && (
+            <h1>Start a new journey</h1>
+            {props.displayMenu && (
                 <ul>
                     <li>
                         <a href="./#">Users</a>
                     </li>
                     <li>
-                        <a href="./#">Admin</a>
+                        <a href="./#">Posts</a>
                     </li>
                     <li>
-                        <button onClick={logOutUser}>Log out</button>
+                        <a href="./#">pictures</a>
+                    </li>
+                    <li>
+                        <button onClick={logout}>Logut</button>
                     </li>
                 </ul>
             )}
