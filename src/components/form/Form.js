@@ -1,24 +1,11 @@
-import Wrapper from "../UI/wrapper/Wrapper";
+// import Wrapper from "../UI/wrapper/Wrapper";
 import styles from "./Form.module.css";
 import Button from "../UI/button/Button";
 
-import React, { useReducer, useState } from "react";
+import React, { useReducer, useState, useEffect } from "react";
 
 const Form = function (props) {
     const [isFormValid, setIsFormValid] = useState(false);
-
-    const checkFormValidation = function () {
-        if (
-            usernameState.isValid &&
-            passwordState.isValid &&
-            passwordConfirn.isValid &&
-            emailState.isValid
-        ) {
-            setIsFormValid(true);
-        } else {
-            setIsFormValid(false);
-        }
-    };
 
     //username validation
     const [usernameState, dispatchUsernameState] = useReducer(
@@ -43,7 +30,6 @@ const Form = function (props) {
 
     const usernameChangeHandler = function (event) {
         dispatchUsernameState({ type: "USER_INPUT", val: event.target.value });
-        checkFormValidation();
     };
 
     const usernameBlurHandler = function () {
@@ -73,7 +59,6 @@ const Form = function (props) {
 
     function passwordWordChangeHandler(event) {
         dispatchPasswordState({ type: "USER_INPUT", val: event.target.value });
-        checkFormValidation();
     }
 
     function passwordBlurHandler() {
@@ -81,7 +66,7 @@ const Form = function (props) {
     }
 
     //password confirm
-    const [passwordConfirn, dispatchPasswordConfirm] = useReducer(
+    const [passwordConfirm, dispatchPasswordConfirm] = useReducer(
         (state, action) => {
             if (action.type === "USER_INPUT") {
                 return {
@@ -107,7 +92,7 @@ const Form = function (props) {
             type: "USER_INPUT",
             val: event.target.value,
         });
-        checkFormValidation();
+        // checkFormValidation();
     };
 
     const passwordConfirmBlur = function () {
@@ -138,7 +123,7 @@ const Form = function (props) {
 
     const onEmailChangeHandler = function (event) {
         dispatchEmailState({ type: "USER_INPUT", val: event.target.value });
-        checkFormValidation();
+        // checkFormValidation();
     };
 
     const emailBlurHandler = function () {
@@ -147,7 +132,27 @@ const Form = function (props) {
 
     const submitInformations = function () {
         props.onSubmit();
-    }
+    };
+
+    const { isValid: emailValid } = emailState;
+    const { isValid: usernameValid } = usernameState;
+    const { isValid: passwordValid } = passwordState;
+    const { isValid: passwordCheckValid } = passwordConfirm;
+
+    useEffect(() => {
+        const identifier = setTimeout(() => {
+            setIsFormValid(
+                emailValid &&
+                    usernameValid &&
+                    passwordValid &&
+                    passwordCheckValid
+            );
+        }, 3000);
+
+        return () => {
+            clearTimeout(identifier);
+        };
+    }, [emailValid, usernameValid, passwordValid, passwordCheckValid]);
 
     return (
         <form className={styles.form} onSubmit={submitInformations}>
@@ -182,14 +187,14 @@ const Form = function (props) {
             </div>
             <div
                 className={`${styles.form_control} ${
-                    passwordConfirn.isValid === false ? styles.invalid : ""
+                    passwordConfirm.isValid === false ? styles.invalid : ""
                 }`}
             >
                 <label htmlFor="password2">Password Check</label>
                 <input
                     type="password"
                     id="password2"
-                    value={passwordConfirn.value}
+                    value={passwordConfirm.value}
                     onChange={passwordConfirmChangeHandler}
                     onBlur={passwordConfirmBlur}
                 />
@@ -208,8 +213,7 @@ const Form = function (props) {
                 />
             </div>
             <Button
-                className={`${styles.button} ${
-                    isFormValid === false ? styles.disabled : styles.enabled
+                className={`${styles.button} ${isFormValid ? styles.enabled : styles.disabled
                 }`}
             >
                 Submit
